@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.fragments.detail.OverviewFragment"
+    android:background="@color/midnightblue"
+    >
+        <TextView
+            android:id="@+id/overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Overview"
+            android:layout_margin = "30dp"
+            android:textColor="@color/cloud"
+            android:textSize="17sp"
+            android:fontFamily="@font/regular"
+            android:gravity="center"
+            />
+</FrameLayout>

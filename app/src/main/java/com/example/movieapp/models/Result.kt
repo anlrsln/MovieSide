@@ -1,17 +1,17 @@
 package com.example.movieapp.models
 
+import com.google.gson.annotations.SerializedName
+import java.io.Serializable
+
 data class Result(
-    val adult:Boolean,
-    val backdrop_path:String,
-    val genre_ids:List<Int>,
-    val id:Int,
-    val overview:String,
-    val popularity:Double,
-    val poster_path:String,
-    val release_date:String,
-    val title:String,
-    val vote_average:Double,
-    val genrestringTr:String,
-    val genrestring: String
-) {
-}
+    @SerializedName("adult") val adult:Boolean,
+    @SerializedName("backdrop_path") val backdrop_path:String,
+    @SerializedName("genre_ids") val genre_ids:List<Int>,
+    @SerializedName("id") val id:Int,
+    @SerializedName("overview") val overview:String,
+    @SerializedName("popularity") val popularity:Double,
+    @SerializedName("poster_path") val poster_path:String,
+    @SerializedName("release_date") val release_date:String,
+    @SerializedName("title") val title:String,
+    @SerializedName("vote_average") val vote_average:Double,
+):Serializable

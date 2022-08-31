@@ -6,7 +6,8 @@
         android:id="@+id/home_item"
         android:icon="@drawable/ic_home"
         android:title="Home"
-        app:cnb_iconColor="@color/cloud" />
+        app:cnb_iconColor="@color/cloud"
+        />
     <item
         android:id="@+id/favorite_item"
         android:icon="@drawable/ic_heart"

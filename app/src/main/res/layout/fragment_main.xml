@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainFragment"
+    tools:context=".ui.fragments.MainFragment"
     android:orientation="vertical"
     >
 
@@ -20,6 +20,7 @@
         android:layout_marginBottom="60dp"
         />
 
+
     <com.ismaeldivita.chipnavigation.ChipNavigationBar
         android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
@@ -27,7 +28,5 @@
         android:layout_gravity="bottom"
         android:background="@color/midnightblue"
         app:cnb_menuResource="@menu/bottom_bar_menu" />
-
-
 
 </FrameLayout>

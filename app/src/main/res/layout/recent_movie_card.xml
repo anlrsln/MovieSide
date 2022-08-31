@@ -8,6 +8,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:orientation="horizontal"
+    android:background="@color/midnightblue"
     >
 
         <androidx.cardview.widget.CardView
@@ -26,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             >
             <TextView
                 android:id="@+id/movieName"
@@ -36,6 +37,7 @@
                 android:text="Deneme deneme deneme"
                 android:textStyle="bold"
                 android:textColor="@color/cloud"
+                android:fontFamily="@font/regular"
                 />
 
             <TextView
@@ -44,15 +46,8 @@
                 android:layout_height="wrap_content"
                 android:text="09.10.2023"
                 android:textColor="@color/cloud"
+                android:fontFamily="@font/regular"
                 />
-            <TextView
-                android:id="@+id/movieGenre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Genre"
-                android:textColor="@color/cloud"
-                />
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -69,10 +64,12 @@
                     android:id="@+id/movieRate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8/10"
                     android:layout_gravity="center"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="5.5"
+                    android:layout_marginTop="5dp"
                     android:textColor="@color/cloud"
+                    android:fontFamily="@font/regular"
                     />
             </LinearLayout>
         </LinearLayout>

@@ -2,10 +2,13 @@ package com.example.movieapp.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieapp.databinding.PopularMovieCardBinding
+import com.example.movieapp.models.GenreIdsBundle
 import com.example.movieapp.models.Result
+import com.example.movieapp.ui.fragments.home.HomeFragmentDirections
 
 class PopularMovieAdapter(val movieList: List<Result>,private val isFirstScreen : Boolean = true) : RecyclerView.Adapter<PopularMovieAdapter.MovieCardViewHolder>()  {
 
@@ -18,13 +21,22 @@ class PopularMovieAdapter(val movieList: List<Result>,private val isFirstScreen 
     }
 
     override fun onBindViewHolder(holder: MovieCardViewHolder, position: Int) {
-        val movie = movieList.get(position)
+        val movie = movieList[position]
+        val genre = GenreIdsBundle(movie.genre_ids)
+        holder.binding.cardNumber.text = "${position+1}"
         holder.binding.movieName.text = movie.title
-        holder.binding.movieGenre.text=movie.genrestring
         Glide.with(holder.binding.posterView)
             .load("https://image.tmdb.org/t/p/w342/${movie.poster_path}")
             .into(holder.binding.posterView)
+        holder.binding.cardLinearLayout.setOnClickListener {
+            val pass = HomeFragmentDirections.actionHomeFragment2ToMovieDetailFragment(
+                genreIdsBundle = genre,
+                movie = movie
+            )
+            Navigation.findNavController(it).navigate(pass)
+        }
     }
+
 
     override fun getItemCount(): Int {
         if(isFirstScreen){

@@ -12,7 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" >@color/midnightblue</item>
         <!-- Customize your theme here. -->
-
-
     </style>
+
+    <style name="tab_text" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+
 </resources>

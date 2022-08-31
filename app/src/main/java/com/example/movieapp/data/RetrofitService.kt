@@ -1,9 +1,7 @@
 package com.example.movieapp.data
 
 
-import com.example.movieapp.models.Genre
-import com.example.movieapp.models.Movie
-import com.example.movieapp.models.Trailer
+import com.example.movieapp.models.*
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -28,6 +26,8 @@ interface RetrofitService {
     @GET("search/movie?")
     fun getSuggestions(@Query("api_key") api_key:String,@Query("query") query: String) : Call<Movie>
 
+    @GET("movie/{id}/reviews?")
+    fun getReviews(@Path("id") id:Int,@Query("api_key") api_key: String) : Call<Review>
 
 
 }
