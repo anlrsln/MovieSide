@@ -18,13 +18,12 @@ import java.util.ArrayList
 
 class MovieDetailFragment : Fragment() {
 
-    private lateinit var binding : FragmentMovieDetailBinding
-    private  val viewModel: DetailViewModel by activityViewModels()
-    private val retrofitViewModel : RetrofitViewModel by activityViewModels()
-    private lateinit var genre_list_bundle : List<Int>
+    private lateinit var binding: FragmentMovieDetailBinding
+    private val viewModel: DetailViewModel by activityViewModels()
+    private val retrofitViewModel: RetrofitViewModel by activityViewModels()
+    private lateinit var genre_list_bundle: List<Int>
     private lateinit var genre_list_livedata: List<GenreX>
-    private  var genre_names = ArrayList<String>()
-
+    private var genre_names = ArrayList<String>()
 
 
     override fun onCreateView(
@@ -32,24 +31,24 @@ class MovieDetailFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentMovieDetailBinding.inflate(inflater,container,false)
+        binding = FragmentMovieDetailBinding.inflate(inflater, container, false)
 
         // Toolbar Ayarları
         binding.toolbar.title = "Detail"
 
         // TabLayout-ViewPager metodu
-        viewModel.setTabLayout(binding,requireActivity())
+        viewModel.setTabLayout(binding, requireActivity())
 
         // bundle objesiyle args'lar alındı
-        val bundle : MovieDetailFragmentArgs by navArgs()
+        val bundle: MovieDetailFragmentArgs by navArgs()
         // args içerisindeki genre_ids listesi alındı
         genre_list_bundle = bundle.genreIdsBundle.genre_ids
 
         // Genre verileri çekildi ve listelere aktarıldı
-        setGenreData(retrofitViewModel,binding)
+        setGenreData(retrofitViewModel, binding)
 
         // Veriler view'lara atandı
-        viewModel.setMovieDetailCard(binding,bundle)
+        viewModel.setMovieDetailCard(binding, bundle)
 
 
         // Viewpager OvervieFragment'ına viewmodel aracılığıyla değerler atandı
@@ -103,15 +102,5 @@ class MovieDetailFragment : Fragment() {
             }
         })
     }
-
-
-
-
-
-
-
-
-
-
 
 }

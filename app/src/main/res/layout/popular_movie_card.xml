@@ -14,6 +14,22 @@
         android:layout_marginRight="8dp"
         android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/cardNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:alpha="1.0"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/regular"
+            android:shadowColor="@color/cloud"
+            android:shadowDx="0"
+            android:shadowDy="4"
+            android:shadowRadius="8"
+            android:text="2"
+            android:textColor="#C8AF28"
+            android:layout_gravity="center"
+            android:textSize="70dp" />
+
         <androidx.cardview.widget.CardView
             android:layout_width="342px"
             android:layout_height="512px"
@@ -21,30 +37,14 @@
             app:cardCornerRadius="20dp">
 
             <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/posterView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
 
-                <TextView
-                    android:id="@+id/cardNumber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:shadowColor="@color/cloud"
-                    android:fontFamily="@font/regular"
-                    android:shadowDx="0"
-                    android:shadowDy="4"
-                    android:shadowRadius="8"
-                    android:text="2"
-                    android:textColor="@color/gold"
-                    android:textSize="70dp"
-                    android:layout_marginTop="100dp"
-                    android:layout_marginLeft="3dp"
-                    android:alpha="0.6"
-                    />
             </RelativeLayout>
 
 

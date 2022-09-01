@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="WELCOME TO MOVIESIDE"
+            android:text="CREATE A NEW ACCOUNT"
             android:textColor="@color/cloud"
             android:gravity="center"
             android:textSize="50dp"
@@ -95,6 +95,35 @@
                 android:layout_gravity="center"
                 />
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:background="@drawable/edittext_layout"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/password"
+                android:layout_gravity="center"
+                android:layout_margin="7dp"/>
+
+            <EditText
+                android:id="@+id/confirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/midnightblue"
+                android:fontFamily="@font/regular"
+                android:hint="Confirm  Password"
+                android:textColor="@color/cloud"
+                android:textColorHint="@color/cloud"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
 
 
 
@@ -111,38 +140,20 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnSignIn"
+            android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sıgn In"
-            android:layout_margin = "10dp"
-            android:paddingTop="7dp"
+            android:layout_margin="10dp"
             android:background="@drawable/layout_bg"
             android:fontFamily="@font/regular"
+            android:paddingTop="7dp"
+            android:text="Sıgn Up"
             android:textAlignment="gravity"
             android:textSize="15sp"
 
             />
-
-        <TextView
-            android:id="@+id/newAccountBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Create a New Account"
-            android:layout_gravity="center"
-            android:textSize="15sp"
-            android:layout_marginTop="30dp"
-            android:textColor="@color/cloud"
-            android:fontFamily="@font/regular"
-            />
-
-
-
     </LinearLayout>
-
-
 
 
 </LinearLayout>
